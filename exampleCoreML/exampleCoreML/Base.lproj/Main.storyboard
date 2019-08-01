@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="exampleCoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoJ-go-Q07">
+                                <rect key="frame" x="0.0" y="580.5" width="414" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9c-jn-6ET">
+                                <rect key="frame" x="128" y="727" width="158" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Wa-n9-xI9"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCP-ak-Yag">
+                                <rect key="frame" x="0.0" y="44" width="414" height="450.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hCP-ak-Yag" firstAttribute="trailing" secondItem="n7A-nQ-Ygd" secondAttribute="trailing" id="0Mi-ZR-Ttq"/>
+                            <constraint firstItem="eoJ-go-Q07" firstAttribute="trailing" secondItem="n7A-nQ-Ygd" secondAttribute="trailing" id="6Qz-Jf-Se3"/>
+                            <constraint firstItem="eoJ-go-Q07" firstAttribute="top" secondItem="hCP-ak-Yag" secondAttribute="bottom" constant="86" id="9dS-W8-xFa"/>
+                            <constraint firstItem="n7A-nQ-Ygd" firstAttribute="bottom" secondItem="G9c-jn-6ET" secondAttribute="bottom" constant="101" id="9eQ-vd-Ep6"/>
+                            <constraint firstItem="G9c-jn-6ET" firstAttribute="top" secondItem="eoJ-go-Q07" secondAttribute="bottom" constant="120" id="RuG-am-SL5"/>
+                            <constraint firstItem="eoJ-go-Q07" firstAttribute="leading" secondItem="n7A-nQ-Ygd" secondAttribute="leading" id="Uhl-2Q-mWT"/>
+                            <constraint firstItem="hCP-ak-Yag" firstAttribute="leading" secondItem="n7A-nQ-Ygd" secondAttribute="leading" id="d1Z-Ya-uSL"/>
+                            <constraint firstItem="hCP-ak-Yag" firstAttribute="top" secondItem="n7A-nQ-Ygd" secondAttribute="top" id="hYn-Fa-LWz"/>
+                            <constraint firstItem="n7A-nQ-Ygd" firstAttribute="trailing" secondItem="G9c-jn-6ET" secondAttribute="trailing" constant="128" id="l8b-iJ-j1o"/>
+                            <constraint firstItem="eoJ-go-Q07" firstAttribute="top" secondItem="hCP-ak-Yag" secondAttribute="bottom" constant="86" id="q89-r4-Sxe"/>
+                            <constraint firstItem="G9c-jn-6ET" firstAttribute="leading" secondItem="n7A-nQ-Ygd" secondAttribute="leading" constant="128" id="rZS-ZF-7zH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n7A-nQ-Ygd"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationImageView" destination="hCP-ak-Yag" id="xG4-fv-i0c"/>
+                        <outlet property="classificationLabel" destination="eoJ-go-Q07" id="9bQ-Fx-aig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+</document>
