@@ -13,6 +13,7 @@
 		78C1E59D22F2FFE800529420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C1E59C22F2FFE800529420 /* Assets.xcassets */; };
 		78C1E5A022F2FFE800529420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C1E59E22F2FFE800529420 /* LaunchScreen.storyboard */; };
 		78C1E5AB22F2FFE900529420 /* exampleCoreMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C1E5AA22F2FFE900529420 /* exampleCoreMLTests.swift */; };
+		78C1E5B822F306D400529420 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 78C1E5B622F306D400529420 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		78C1E5A622F2FFE800529420 /* exampleCoreMLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exampleCoreMLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C1E5AA22F2FFE900529420 /* exampleCoreMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleCoreMLTests.swift; sourceTree = "<group>"; };
 		78C1E5AC22F2FFE900529420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C1E5B622F306D400529420 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				78C1E59C22F2FFE800529420 /* Assets.xcassets */,
 				78C1E59E22F2FFE800529420 /* LaunchScreen.storyboard */,
 				78C1E5A122F2FFE800529420 /* Info.plist */,
+				78C1E5B622F306D400529420 /* Resnet50.mlmodel */,
 			);
 			path = exampleCoreML;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78C1E59822F2FFB700529420 /* ViewController.swift in Sources */,
+				78C1E5B822F306D400529420 /* Resnet50.mlmodel in Sources */,
 				78C1E59622F2FFB700529420 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
