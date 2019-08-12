@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  exampleCoreML
 //
-//  Created by Will Lowry on 7/15/19.
+//  Created by Will Lowry on 8/1/19.
 //  Copyright © 2019 Programmer Alley. All rights reserved.
 //
 
