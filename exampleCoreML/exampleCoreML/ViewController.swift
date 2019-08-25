@@ -2,11 +2,9 @@
 //  ViewController.swift
 //  exampleCoreML
 //
-//  Created by Will Lowry on 8/1/19.
+//  Created by Will Lowry on 7/15/19.
 //  Copyright © 2019 Programmer Alley. All rights reserved.
 //
-
-
 
 import UIKit
 import CoreML
@@ -27,19 +25,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.allowsEditing = false
         
     }
+
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             classificationImageView.image = pickedImage
-            
-            // Convert UIImage taken from the camera to a CIImage
+        
+            // Convert image taken from camera to CIImage class.
             guard let ciimage = CIImage(image: pickedImage) else {
                 fatalError("There was an error in converting UIImage to CIImage.")
             }
             
             processImage(image: ciimage)
-            
+        
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
@@ -49,13 +48,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func processImage(image: CIImage) {
         
-        guard let model = try? VNCoreMLModel(for: Resnet50().model) else {
+        guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else {
             fatalError("Error occured when loading Core ML model.")
         }
         
         let request = VNCoreMLRequest(model: model) { (request, error) in
             guard let results = request.results as? [VNClassificationObservation] else {
-                fatalError("Error occured when model processed image.")
+                fatalError("Error occured when processing image.")
             }
             
             if let result = results.first {
@@ -73,12 +72,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
         present(imagePicker, animated: true, completion: nil)
         
     }
-    
     
 }
 
